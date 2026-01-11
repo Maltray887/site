@@ -1,0 +1,8 @@
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "serve .",
+    "build": "echo 'No build step required'"
+  }
+}
