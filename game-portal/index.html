@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Игровой Портал</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+</head>
+<body>
+    <!-- Мобильное меню -->
+    <div class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo">🎮 GamePortal</span>
+            <button class="close-menu-btn" id="closeMobileMenu">×</button>
+        </div>
+        <a href="#home" class="mobile-menu-link active" data-section="home">Главная</a>
+        <a href="#games" class="mobile-menu-link" data-section="games">Игры</a>
+        <a href="#about" class="mobile-menu-link" data-section="about">О нас</a>
+        <div class="mobile-menu-theme">
+            <span>Тема:</span>
+            <button id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">🎮 GamePortal</div>
+            <nav>
+                <a href="#home" class="active">Главная</a>
+                <a href="#games">Игры</a>
+                <a href="#about">О нас</a>
+                <div class="header-right">
+                    <a href="https://t.me/+qXel42RiyrtmNzRi" target="_blank" class="telegram-btn-small" title="Наш Telegram канал">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <button id="themeToggle" title="Сменить тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Добро пожаловать в мир игр!</h1>
+            <p>Играйте в популярные онлайн-игры прямо в браузере</p>
+            <a href="#games" class="btn">Начать играть</a>
+            <div class="controls-info">
+                <p><strong>Управление во всех играх:</strong> WASD или стрелки</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="games" id="games">
+        <div class="container">
+            <h2>Популярные игры</h2>
+            <div class="games-grid">
+                <div class="game-card" data-game="snake">
+                    <div class="game-icon">🐍</div>
+                    <h3>Змейка</h3>
+                    <p>Классическая игра в змейку</p>
+                    <p class="game-controls-hint">WASD или стрелки</p>
+                    <button class="play-btn" data-game="snake">Играть</button>
+                </div>
+                <div class="game-card" data-game="2048">
+                    <div class="game-icon">🧩</div>
+                    <h3>2048</h3>
+                    <p>Соберите плитку 2048</p>
+                    <p class="game-controls-hint">WASD или стрелки</p>
+                    <button class="play-btn" data-game="2048">Играть</button>
+                </div>
+                <div class="game-card" data-game="superfighters">
+                    <div class="game-icon">🥊</div>
+                    <h3>Супербойцы</h3>
+                    <p>Аркадный файтинг</p>
+                    <p class="game-controls-hint">WASD, пробел, J/K</p>
+                    <button class="play-btn" data-game="superfighters">Играть</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Добро пожаловать на GamePortal! Мы предлагаем лучшие бесплатные онлайн-игры, которые можно играть прямо в браузере без скачивания.</p>
+                    <p>На нашем сайте вы найдете классические игры, которые понравятся как детям, так и взрослым. Все игры оптимизированы для работы на компьютерах и мобильных устройствах.</p>
+                    <p>Присоединяйтесь к нашему сообществу в Telegram, чтобы быть в курсе новых игр и обновлений!</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-gamepad"></i>
+                        <h4>Бесплатные игры</h4>
+                        <p>Все игры доступны бесплатно</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Для всех устройств</h4>
+                        <p>Играйте на ПК, телефоне или планшете</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Быстрая загрузка</h4>
+                        <p>Игры загружаются мгновенно</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="game-container" id="gameContainer">
+        <div class="container">
+            <div class="game-header">
+                <h2 id="gameTitle">Выберите игру</h2>
+                <div class="game-controls-info">
+                    <span id="controlsInfo">Выберите игру из списка выше</span>
+                    <button id="closeGame" class="close-btn">× Закрыть игру</button>
+                </div>
+            </div>
+            <div id="gameFrame" tabindex="0">
+                <div class="game-wrapper">
+                    <div class="game-placeholder">
+                        <i class="fas fa-gamepad"></i>
+                        <p>Выберите игру из списка выше, чтобы начать играть</p>
+                        <p class="placeholder-hint">Используйте WASD или стрелки для управления</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-controls" id="mobileControls">
+                <div class="mobile-controls-row">
+                    <button class="mobile-control-btn" data-key="ArrowUp" data-key-alt="w">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+                <div class="mobile-controls-row">
+                    <button class="mobile-control-btn" data-key="ArrowLeft" data-key-alt="a">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="mobile-control-btn" data-key="ArrowDown" data-key-alt="s">
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
+                    <button class="mobile-control-btn" data-key="ArrowRight" data-key-alt="d">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="mobile-controls-row">
+                    <button class="mobile-control-btn action-btn" data-key=" " id="mobileSpace">
+                        Прыжок
+                    </button>
+                    <button class="mobile-control-btn action-btn" data-key="j" id="mobileAttack1">
+                        Атака 1
+                    </button>
+                    <button class="mobile-control-btn action-btn" data-key="k" id="mobileAttack2">
+                        Атака 2
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GamePortal</h3>
+                    <p>Лучшие бесплатные онлайн-игры</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <a href="https://t.me/+qXel42RiyrtmNzRi" target="_blank" class="footer-link">
+                        <i class="fab fa-telegram"></i> Наш Telegram канал
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <a href="#home" class="footer-link">Главная</a>
+                    <a href="#games" class="footer-link">Игры</a>
+                    <a href="#about" class="footer-link">О нас</a>
+                </div>
+            </div>
+            <p class="copyright">© 2024 GamePortal. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
